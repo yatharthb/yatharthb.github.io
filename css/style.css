@@ -1,0 +1,168 @@
+/*
+Color hex codes:
+#ffeead light yellow
+#ffcc5c dark yellow
+#96ceb4 light seablue
+#ff6f69 salmon pink
+#f9ccac light pink
+#3b3a30 grey black
+#d5f4e6 light blue
+#80ced6 medium blue
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 300vh;
+    background-color: #f9ccac;
+}
+
+#navbar {
+    /*background-color: #ffcc5c;*/
+    opacity: 1;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    position: sticky;
+    top:0;
+    box-sizing: border-box; 
+    padding:15px;
+    /* 
+    border:transparent solid;
+    border-bottom-color:gray;
+    */
+}
+
+#navbar a {
+    font-family: sans-serif;
+    color:black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.button:hover{
+    background-color: #f9ccac;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.button:active{
+    background-color: #ff6f69;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.button{
+    background-color: #ffeead;
+    border-radius: 5px;
+    padding: 3px;
+    transition-duration: 0.2s;
+}
+
+#box-1 {
+    /*background-color:#f9ccac;*/
+    background-image: linear-gradient(to bottom right,#ff6f69, #ffeead);
+    height: 400px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#box-1 p {
+    padding: 150px 0;
+    font-size:4em;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.section {
+    background-color: #ffeead;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-right:50px;
+    padding-left:50px;
+    margin-top:10px;
+    overflow: auto;
+}
+
+h2 {
+    font-family: sans-serif;
+    color: #3b3a30;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+
+.end-space {
+    padding-top: 200px;
+}
+
+#my-photo {
+    float:left;
+    width: 160px; 
+    height: 160px;
+    border-radius: 50%;
+    border: solid #ff6f69;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#projects p {
+    margin-bottom:10px;
+}
+
+
+#skills p:hover{
+    background-color: #80ced6;
+
+}
+
+#skills p {
+    float: left;
+    background-color: #d5f4e6;
+    margin-right:20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+#resume a, #projects a {
+    font-family: sans-serif;
+    color: dodgerblue;
+}
+
+#resume a:hover, #projects a:hover {
+    font-family: sans-serif;
+    color: white;
+    background-color: #ff6f69
+}
+
+#coursework ul {
+    font-family: sans-serif;
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#coursework h3 {
+    font-family: sans-serif;
+    color: dodgerblue;
+    font-style: oblique;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
