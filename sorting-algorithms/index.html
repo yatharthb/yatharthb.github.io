@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+    <div id="intro-div">
+    <h1>Sorting Algorithms</h1><br>
+    <p>This project demonstrates the high level differences between the sorting algorithms 
+        by showing the progression of the data from unsorted to sorted. 
+        This project does not intend to compare the speeds of the sorts.</p><br>
+    <label>First, please enter a set of numbers to sort, separated by spaces: </label>    
+    <input type="text" id="numbers" name="numbers" placeholder="Example: 6 4 19 23 1 12" pattern="[0-9 ]+ " required="required" >
+    <button onclick="processInput()">Submit</button> <br><br>
+    <label>Or use my default data set: </label>    
+    <button onclick="useDefaultInput()">Use Default</button> <br><br><p>Jump to a sort:</p>
+    <a href="#selection-sort-div">Selection Sort</a>
+    <a href="#bubble-sort-div">Bubble Sort</a>
+    <a href="#insertion-sort-div">Insertion Sort</a>
+    <a href="#quick-sort-div">Quicksort</a>
+    </div>
+    <div id="selection-sort-div">
+    <h2>Selection Sort</h2>
+    <p>This O(N^2) sorting algorithm goes through the list of elements, finds the smallest element, moves it to the front of the list, and then repeats that for the remaning elements of this list.
+       Notice the tick mark. Everything left of the tick mark is already sorted and everything to the right remains to be sorted.
+    </p>
+    <button class="step-btn" id="selection-step-btn" onclick="stepSelectionSort(this.id)" disabled="true">Step</button><br>
+    <svg id="selection-svg" height="200" width="700"></svg>
+    </div>
+
+    <div id="bubble-sort-div">
+    <h2>Bubble Sort</h2>
+    <p>This O(N^2) algorithm goes through the array and swaps 2 adjacent elements if they are in the wrong order. It usually requires multiple passes through the entire array.
+    </p>
+    <button class="step-btn" id="bubble-step-btn" onclick="stepBubbleSort(this.id)" disabled="true">Small Step</button> 
+    <button class="step-btn" id="bubble-big-step-btn" onclick="bigStepBubbleSort(this.id)" disabled="true">Step</button><br>
+    <svg id="bubble-svg" height="200" width="700"></svg>
+    </div>
+
+    <div id="insertion-sort-div">
+    <h2>Insertion Sort</h2>
+    <p>This O(N^2) algorithm takes each element of the array (in order, one by one), and places it where it belongs within the already sorted section. 
+        Everything left of the tick is already sorted. 
+    </p>
+    <button class="step-btn" id="insertion-step-btn" onclick="stepInsertionSort(this.id)" disabled="true">Step</button><br>
+    <svg id="insertion-svg" height="200" width="700"></svg>
+    </div>
+
+    <div id="quick-sort-div">
+    <h2>Quicksort</h2>
+    <p>This O(N*logN) divide-and-conquer algorithm uses a pivot (underlined in black) and places the pivot in a position such that everything left of the pivot 
+        is smaller than the pivot (blue underline), and everything right of the pivot is greater than it (red underline). 
+        Then, we repeat that process on the 
+        subsection of the array that is left of the pivot, and also on the subsection that is right of the pivot. 
+        It uses recursion and works with a smaller
+        section of the entire array during each call.
+    </p>
+    <button class="step-btn" id="quick-step-btn" onclick="stepQuickSort(this.id)" disabled="true">Step</button><br>
+    <svg id="quick-svg" height="200" width="700"></svg>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- style="border: solid 1px pink;" -->
