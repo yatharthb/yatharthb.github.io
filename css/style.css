@@ -8,6 +8,9 @@ Color hex codes:
 #3b3a30 grey black
 #d5f4e6 light blue
 #80ced6 medium blue
+#F71919 bright red
+#F9F9F9 light gray
+
 */
 
 
@@ -18,7 +21,7 @@ Color hex codes:
 
 body {
     height: 300vh;
-    background-color: #F9F9F9;
+    background-color: #F71919;
 }
 
 #navbar {
@@ -82,7 +85,7 @@ body {
 }
 
 .section {
-    background-color: #96ceb4;
+    background-color: #F9F9F9;
     padding-top:50px;
     padding-bottom:50px;
     padding-right:50px;
