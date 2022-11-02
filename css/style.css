@@ -71,15 +71,15 @@ body {
 #box-1 {
     /*background-color:#f9ccac;*/
     background-image: linear-gradient(to bottom right,#96ceb4, #F71919);
-    height: 400px;
+    height: 200px;
     font-family: sans-serif;
     text-align: center;
 }
 
 #box-1 p {
     padding: 150px 0;
-    font-size:4em;
-    letter-spacing: 20px;
+    font-size:3em;
+    letter-spacing: 17px;
     text-transform: uppercase;
     color: black;
 }
