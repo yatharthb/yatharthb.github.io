@@ -140,6 +140,14 @@ p {
     padding: 10px;
     transition-duration: 0.3s;
 }
+#skills h3 {
+    font-family: sans-serif;
+    color: dodgerblue;
+    font-style: oblique;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
 
 #resume a, #projects a {
     font-family: sans-serif;
