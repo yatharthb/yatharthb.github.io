@@ -126,12 +126,50 @@
                 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=mNGfTdogDGGOlzZTKAUCgeeyyxEiEON_JgBLVhWkkg8&cl=ffffff&w=a"></script>
                     
             </div> 
-            <!--
-            <div class="section"  id="resume">
-                <h2>Resume</h2>
-                <a href="Anubha_resume_122020.pdf" download>Download PDF</a>
-            </div>
-            -->
+            <div class="section" id="cool-feature">
+                <h2>Cool Feature</h2>
+                <p>Using the OpenWeather API, this section will display the current weather in your location. Simply click the button below to see the current weather!</p>
+                <button id="weather-button">Show Weather</button>
+                <div id="weather-display"></div>
+</div>
+<style>
+    #weather-button {
+        font-size: 1.5em;
+        padding: 0.5em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    #weather-button:hover {
+        background-color: #222;
+        color: white;
+    }
+
+    #weather-display {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+</style>
+<script>
+    document.getElementById('weather-button').addEventListener('click', () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            let lat = position.coords.latitude;
+            let long = position.coords.longitude;
+            let apiKey = '032d9b9db1ee708cb8c6e9142a241b70';
+            let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => {
+                    let weather = data.weather[0].description;
+                    let temp = data.main.temp;
+                    let display = document.getElementById('weather-display');
+                    display.innerHTML = `The current weather is ${weather} with a temperature of ${temp} degrees.`;
+                });
+        });
+    });
             <div class="end-space">
             </div>
         <footer><p>&copy 2022</p></footer>
