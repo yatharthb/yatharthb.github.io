@@ -126,7 +126,7 @@ p {
     color: #3b3a30;
     display: block;
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 #projects a:hover {
@@ -143,7 +143,7 @@ p {
     margin-right: 1rem;
     margin-bottom: 1rem;
     padding: 0.5rem;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 #skills p:hover {
@@ -166,7 +166,7 @@ p {
     color: #3b3a30;
     display: block;
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 #contact a:hover {
